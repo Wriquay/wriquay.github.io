@@ -101,48 +101,11 @@ function addToSummary(ingredient, quantity) {
 
         newItem.addEventListener('click', function() {
             summaryList.removeChild(newItem);
-            updateSummaryText();
         });
         summaryList.appendChild(newItem);
     }
-
-    updateSummaryText();
 }
 
-// Function to update the text summary
-function updateSummaryText() {
-    const summaryListItems = document.querySelectorAll('#summary-list button');
-    const summaryText = Array.from(summaryListItems).map(item => {
-        const ingredient = item.dataset.ingredient.replace(/-/g, ' ').toUpperCase();
-        const quantity = item.querySelector('.quantity').textContent;
-        return `${ingredient}: ${quantity}`;
-    }).join(', ');
-
-    let summaryTextElement = document.getElementById('summary-text');
-    if (!summaryTextElement) {
-        summaryTextElement = document.createElement('p');
-        summaryTextElement.id = 'summary-text';
-        document.getElementById('summary').appendChild(summaryTextElement);
-    }
-    summaryTextElement.textContent = `Summary: ${summaryText}`;
-}
-
-// Clear summary text on serve
-document.getElementById('serve-btn').addEventListener('click', function() {
-    if (validateIngredients()) {
-        // Clear the summary list after serving
-        document.getElementById('summary-list').innerHTML = '';
-
-        // Clear the summary text
-        const summaryTextElement = document.getElementById('summary-text');
-        if (summaryTextElement) {
-            summaryTextElement.textContent = '';
-        }
-
-        // Optionally, update the current drink to a new random drink after serving
-        updateCurrentDrink();
-    }
-});
 document.getElementById('serve-btn').addEventListener('click', function() {
     const summaryListItems = document.querySelectorAll('#summary-list button');
     if (summaryListItems.length === 0) {
@@ -183,7 +146,7 @@ function validateIngredients() {
     const summaryItems = document.querySelectorAll('#summary-list button');
 
     let requiredIngredients = {};
-    
+
     if (currentDrink === 'Grape Tea') {
         requiredIngredients = {
             'green-tea': 250,
@@ -202,12 +165,12 @@ function validateIngredients() {
     // Check if required ingredients are in the summary list
     for (let [ingredient, requiredQuantity] of Object.entries(requiredIngredients)) {
         const summaryItem = Array.from(summaryItems).find(item => item.dataset.ingredient === ingredient);
-        
+
         if (!summaryItem) {
             alert(`Missing ingredient: ${ingredient.replace(/-/g, ' ')}`);
             return false;
         }
-        
+
         const quantity = parseInt(summaryItem.querySelector('.quantity').textContent, 10);
         if (quantity < requiredQuantity) {
             alert(`Insufficient quantity of ${ingredient.replace(/-/g, ' ')}. Required: ${requiredQuantity}, Available: ${quantity}`);
