@@ -80,7 +80,6 @@ document.getElementById('add-tea-btn').addEventListener('click', function() {
 function addToSummary(ingredient, quantity) {
     const summaryList = document.getElementById('summary-list');
     const existingItem = summaryList.querySelector(`button[data-ingredient="${ingredient}"]`);
-    const summaryText = document.getElementById('summary-text');
 
     if (existingItem) {
         // Update existing item quantity
@@ -102,32 +101,48 @@ function addToSummary(ingredient, quantity) {
 
         newItem.addEventListener('click', function() {
             summaryList.removeChild(newItem);
-            updateSummaryText(); // Update text when an item is removed
+            updateSummaryText();
         });
         summaryList.appendChild(newItem);
     }
 
-    updateSummaryText(); // Update text when an item is added
+    updateSummaryText();
 }
 
-// Function to update the text summary in the "In Drink" section
+// Function to update the text summary
 function updateSummaryText() {
     const summaryListItems = document.querySelectorAll('#summary-list button');
-    const summaryText = document.getElementById('summary-text');
+    const summaryText = Array.from(summaryListItems).map(item => {
+        const ingredient = item.dataset.ingredient.replace(/-/g, ' ').toUpperCase();
+        const quantity = item.querySelector('.quantity').textContent;
+        return `${ingredient}: ${quantity}`;
+    }).join(', ');
 
-    if (summaryListItems.length === 0) {
-        summaryText.textContent = "No ingredients added yet.";
-    } else {
-        const summaryArray = Array.from(summaryListItems).map(item => {
-            const ingredientName = item.dataset.ingredient.replace(/-/g, ' ').toUpperCase();
-            const quantity = item.querySelector('.quantity').textContent;
-            return `${ingredientName}: ${quantity}`;
-        });
-
-        summaryText.textContent = "In Drink: " + summaryArray.join(', ');
+    let summaryTextElement = document.getElementById('summary-text');
+    if (!summaryTextElement) {
+        summaryTextElement = document.createElement('p');
+        summaryTextElement.id = 'summary-text';
+        document.getElementById('summary').appendChild(summaryTextElement);
     }
+    summaryTextElement.textContent = `Summary: ${summaryText}`;
 }
 
+// Clear summary text on serve
+document.getElementById('serve-btn').addEventListener('click', function() {
+    if (validateIngredients()) {
+        // Clear the summary list after serving
+        document.getElementById('summary-list').innerHTML = '';
+
+        // Clear the summary text
+        const summaryTextElement = document.getElementById('summary-text');
+        if (summaryTextElement) {
+            summaryTextElement.textContent = '';
+        }
+
+        // Optionally, update the current drink to a new random drink after serving
+        updateCurrentDrink();
+    }
+});
 document.getElementById('serve-btn').addEventListener('click', function() {
     const summaryListItems = document.querySelectorAll('#summary-list button');
     if (summaryListItems.length === 0) {
