@@ -127,6 +127,12 @@ function validateIngredients() {
         return false;
     }
 
+    // Check if the number of ingredients is exactly the same as required
+    if (summaryItems.length !== Object.keys(requiredIngredients).length) {
+        alert('Incorrect ingredients. Make sure you only include the necessary ingredients.');
+        return false;
+    }
+
     // Check if required ingredients are in the summary list
     for (let [ingredient, requiredQuantity] of Object.entries(requiredIngredients)) {
         const summaryItem = Array.from(summaryItems).find(item => item.dataset.ingredient === ingredient);
