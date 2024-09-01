@@ -106,7 +106,22 @@ function addToSummary(ingredient, quantity) {
     }
 }
 
+document.getElementById('toggle-water-btn').addEventListener('click', function() {
+    const button = this;
+    const currentState = button.dataset.state;
+
+    if (currentState === 'cold') {
+        button.textContent = 'Hot';
+        button.dataset.state = 'hot';
+    } else {
+        button.textContent = 'Cold';
+        button.dataset.state = 'cold';
+    }
+});
+
+// Function to validate if the ingredients match the current drink
 function validateIngredients() {
+    console.log('Validating ingredients...');
     const currentDrink = document.getElementById('drink-name').textContent;
     const summaryItems = document.querySelectorAll('#summary-list button');
 
@@ -127,13 +142,16 @@ function validateIngredients() {
         return false;
     }
 
-    // Check if the number of selected ingredients matches the required ingredients
-    if (summaryItems.length !== Object.keys(requiredIngredients).length) {
-        alert('Incorrect number of ingredients.');
-        return false;
+    // Check if only the required ingredients are present
+    for (let summaryItem of summaryItems) {
+        const ingredient = summaryItem.dataset.ingredient;
+        if (!requiredIngredients.hasOwnProperty(ingredient)) {
+            alert(`Extra ingredient: ${ingredient.replace(/-/g, ' ')}`);
+            return false;
+        }
     }
 
-    // Validate each required ingredient
+    // Check if required ingredients are in the summary list
     for (let [ingredient, requiredQuantity] of Object.entries(requiredIngredients)) {
         const summaryItem = Array.from(summaryItems).find(item => item.dataset.ingredient === ingredient);
 
@@ -143,8 +161,8 @@ function validateIngredients() {
         }
 
         const quantity = parseInt(summaryItem.querySelector('.quantity').textContent, 10);
-        if (quantity !== requiredQuantity) {
-            alert(`Incorrect quantity of ${ingredient.replace(/-/g, ' ')}. Required: ${requiredQuantity}, Available: ${quantity}`);
+        if (quantity < requiredQuantity) {
+            alert(`Insufficient quantity of ${ingredient.replace(/-/g, ' ')}. Required: ${requiredQuantity}, Available: ${quantity}`);
             return false;
         }
     }
@@ -161,8 +179,9 @@ function validateIngredients() {
     return true;
 }
 
-// Consolidated serve button click event listener with validation
+// Serve button click event listener
 document.getElementById('serve-btn').addEventListener('click', function() {
+    console.log('Serve button clicked');
     if (validateIngredients()) {
         const summaryListItems = document.querySelectorAll('#summary-list button');
         const ingredients = Array.from(summaryListItems).map(item => ({
@@ -180,18 +199,5 @@ document.getElementById('serve-btn').addEventListener('click', function() {
 
         // Optionally, update the current drink to a new random drink after serving
         updateCurrentDrink();
-    }
-});
-
-document.getElementById('toggle-water-btn').addEventListener('click', function() {
-    const button = this;
-    const currentState = button.dataset.state;
-
-    if (currentState === 'cold') {
-        button.textContent = 'Hot';
-        button.dataset.state = 'hot';
-    } else {
-        button.textContent = 'Cold';
-        button.dataset.state = 'cold';
     }
 });
