@@ -160,3 +160,38 @@ function validateIngredients() {
 
     return true;
 }
+
+// Consolidated serve button click event listener with validation
+document.getElementById('serve-btn').addEventListener('click', function() {
+    if (validateIngredients()) {
+        const summaryListItems = document.querySelectorAll('#summary-list button');
+        const ingredients = Array.from(summaryListItems).map(item => ({
+            ingredient: item.dataset.ingredient,
+            quantity: parseInt(item.querySelector('.quantity').textContent, 10)
+        }));
+
+        console.log('Serving the following ingredients:');
+        ingredients.forEach(item => {
+            console.log(`${item.ingredient}: ${item.quantity}`);
+        });
+
+        // Clear the summary list after serving
+        document.getElementById('summary-list').innerHTML = '';
+
+        // Optionally, update the current drink to a new random drink after serving
+        updateCurrentDrink();
+    }
+});
+
+document.getElementById('toggle-water-btn').addEventListener('click', function() {
+    const button = this;
+    const currentState = button.dataset.state;
+
+    if (currentState === 'cold') {
+        button.textContent = 'Hot';
+        button.dataset.state = 'hot';
+    } else {
+        button.textContent = 'Cold';
+        button.dataset.state = 'cold';
+    }
+});
