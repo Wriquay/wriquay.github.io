@@ -80,6 +80,7 @@ document.getElementById('add-tea-btn').addEventListener('click', function() {
 function addToSummary(ingredient, quantity) {
     const summaryList = document.getElementById('summary-list');
     const existingItem = summaryList.querySelector(`button[data-ingredient="${ingredient}"]`);
+    const summaryText = document.getElementById('summary-text');
 
     if (existingItem) {
         // Update existing item quantity
@@ -98,11 +99,32 @@ function addToSummary(ingredient, quantity) {
         } else {
             newItem.innerHTML = `${ingredient.replace(/-/g, ' ').toUpperCase()}: <span class="quantity">${quantity}</span>`;
         }
-        
+
         newItem.addEventListener('click', function() {
             summaryList.removeChild(newItem);
+            updateSummaryText(); // Update text when an item is removed
         });
         summaryList.appendChild(newItem);
+    }
+
+    updateSummaryText(); // Update text when an item is added
+}
+
+// Function to update the text summary in the "In Drink" section
+function updateSummaryText() {
+    const summaryListItems = document.querySelectorAll('#summary-list button');
+    const summaryText = document.getElementById('summary-text');
+
+    if (summaryListItems.length === 0) {
+        summaryText.textContent = "No ingredients added yet.";
+    } else {
+        const summaryArray = Array.from(summaryListItems).map(item => {
+            const ingredientName = item.dataset.ingredient.replace(/-/g, ' ').toUpperCase();
+            const quantity = item.querySelector('.quantity').textContent;
+            return `${ingredientName}: ${quantity}`;
+        });
+
+        summaryText.textContent = "In Drink: " + summaryArray.join(', ');
     }
 }
 
