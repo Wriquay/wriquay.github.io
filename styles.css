@@ -1,0 +1,191 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80vh;
+    position: relative;
+}
+
+#drink-container, #instructions, #inventory-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 20px);
+}
+
+#tea-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 20px);
+}
+
+#tea-container button#add-tea-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#tea-container button#add-tea-btn:hover {
+    background-color: #45a049;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#inventory-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 20px);
+}
+
+#inventory-container h2 {
+    margin-top: 0;
+}
+
+.inventory-section {
+    margin-bottom: 20px;
+}
+
+.inventory-section h3 {
+    margin-top: 0;
+}
+
+.inventory-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventory-item span {
+    margin: 0 10px;
+}
+
+.inventory-item input.quantity-input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.decrease-btn, .increase-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.tea-decrease-btn, .tea-increase-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+
+.quantity {
+    font-size: 16px;
+    min-width: 30px;
+    text-align: center;
+}
+
+#add-all-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#add-all-btn:hover {
+    background-color: #45a049;
+}
+
+#summary {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#summary h2 {
+    margin-top: 0;
+}
+
+#summary-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+#summary-list button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#summary-list button:hover {
+    background-color: #45a049;
+}
+
+#serve-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+}
+
+#serve-btn:hover {
+    background-color: #0056b3;
+}
+
+#toggle-water-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#toggle-water-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #drink-container, #instructions, #inventory-container, #teas-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

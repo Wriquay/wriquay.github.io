@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartending Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Drink Container Section -->
+        <div id="drink-container">
+            <h2>Current Drink</h2>
+            <p id="drink-name">None</p>
+        </div>
+
+        <!-- Instructions Section -->
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <p>Use the inventory below to select ingredients and toppings.</p>
+        </div>
+
+        <!-- Teas Section -->
+        <div id="tea-container">
+            <h2>Teas</h2>
+            <div class="tea-section">
+                <div class="tea-item">
+                    <span>Green Tea</span>
+                    <button class="tea-decrease-btn" data-ingredient="green-tea">-</button>
+                    <input type="number" class="quantity-input" data-ingredient="green-tea" value="0" min="0" max="300">
+                    <button class="tea-increase-btn" data-ingredient="green-tea">+</button>
+                </div>
+                <div class="tea-item">
+                    <span>4 Seasons Tea</span>
+                    <button class="tea-decrease-btn" data-ingredient="4-seasons-tea">-</button>
+                    <input type="number" class="quantity-input" data-ingredient="4-seasons-tea" value="0" min="0" max="300">
+                    <button class="tea-increase-btn" data-ingredient="4-seasons-tea">+</button>
+                </div>
+                <div class="tea-item">
+                    <span>Black Tea</span>
+                    <button class="tea-decrease-btn" data-ingredient="black-tea">-</button>
+                    <input type="number" class="quantity-input" data-ingredient="black-tea" value="0" min="0" max="300">
+                    <button class="tea-increase-btn" data-ingredient="black-tea">+</button>
+                </div>
+                <!-- New Water Item -->
+                <div class="tea-item">
+                    <span>Water</span>
+                    <button class="tea-decrease-btn" data-ingredient="water">-</button>
+                    <input type="number" class="quantity-input" data-ingredient="water" value="0" min="0" max="300">
+                    <button class="tea-increase-btn" data-ingredient="water">+</button>
+                    <button id="toggle-water-btn" data-state="cold">Cold</button>
+                </div>
+                <button id="add-tea-btn">Add All Teas</button>
+            </div>
+        </div>
+
+        <!-- Inventory Container Section -->
+        <div id="inventory-container">
+            <!-- Toppings section -->
+            <div class="inventory-section">
+                <h3>Toppings</h3>
+                <div class="inventory-item">
+                    <span>Coconut Jelly</span>
+                    <button class="decrease-btn" data-ingredient="coconut-jelly">-</button>
+                    <span class="quantity" data-ingredient="coconut-jelly">0</span>
+                    <button class="increase-btn" data-ingredient="coconut-jelly">+</button>
+                </div>
+                <div class="inventory-item">
+                    <span>Grass Jelly</span>
+                    <button class="decrease-btn" data-ingredient="grass-jelly">-</button>
+                    <span class="quantity" data-ingredient="grass-jelly">0</span>
+                    <button class="increase-btn" data-ingredient="grass-jelly">+</button>
+                </div>
+            </div>
+            <!-- Ingredients section -->
+            <div class="inventory-section">
+                <h3>Ingredients</h3>
+                <div class="inventory-item">
+                    <span>Grape</span>
+                    <button class="decrease-btn" data-ingredient="grape">-</button>
+                    <span class="quantity" data-ingredient="grape">0</span>
+                    <button class="increase-btn" data-ingredient="grape">+</button>
+                </div>
+                <div class="inventory-item">
+                    <span>Lychee</span>
+                    <button class="decrease-btn" data-ingredient="lychee">-</button>
+                    <span class="quantity" data-ingredient="lychee">0</span>
+                    <button class="increase-btn" data-ingredient="lychee">+</button>
+                </div>
+                <div class="inventory-item">
+                    <span>Peach</span>
+                    <button class="decrease-btn" data-ingredient="peach">-</button>
+                    <span class="quantity" data-ingredient="peach">0</span>
+                    <button class="increase-btn" data-ingredient="peach">+</button>
+                </div>
+            </div>
+            <div>
+                <button id="add-all-btn">Add All</button>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div id="summary">
+            <h2>In Drink</h2>
+            <ul id="summary-list">
+                <!-- Summary items will be added here -->
+            </ul>
+            <button id="serve-btn">Serve</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
