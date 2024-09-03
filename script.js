@@ -59,6 +59,39 @@ document.getElementById('add-all-btn').addEventListener('click', function() {
     });
 });
 
+document.querySelectorAll('.topping-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseInt(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 60) {
+                currentQuantity = Math.min(currentQuantity + 5, 60); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 5, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
+document.getElementById('add-topping-btn').addEventListener('click', function() {
+    const inventoryItems = document.querySelectorAll('.topping-item');
+    inventoryItems.forEach(item => {
+        const ingredient = item.querySelector('.quantity').dataset.ingredient;
+        const quantity = parseInt(item.querySelector('.quantity').textContent, 10);
+
+        if (quantity > 0) {
+            addToSummary(ingredient, quantity);
+            item.querySelector('.quantity').textContent = '0'; // Reset quantity
+        }
+    });
+});
+
 document.querySelectorAll('.tea-item button').forEach(button => {
     button.addEventListener('click', function() {
         const ingredient = this.dataset.ingredient;
