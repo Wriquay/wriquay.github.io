@@ -1,3 +1,17 @@
+const recipes = {
+  "Grape Tea": {
+    "green-tea": 250,
+    "grape": 40
+  },
+  "Lychee Tea": {
+    "lychee": 20,
+    "water": {
+      "quantity": 250,
+      "state": "cold"
+    }
+  }
+};
+
 // Function to randomly select a drink and update the "Current Drink" section
 function updateCurrentDrink() {
     const drinks = ['Grape Tea', 'Lychee Tea'];
@@ -121,26 +135,15 @@ document.getElementById('toggle-water-btn').addEventListener('click', function()
 
 // Function to validate if the ingredients match the current drink
 function validateIngredients() {
-    console.log('Validating ingredients...');
     const currentDrink = document.getElementById('drink-name').textContent;
     const summaryItems = document.querySelectorAll('#summary-list button');
 
-    let requiredIngredients = {};
-
-    if (currentDrink === 'Grape Tea') {
-        requiredIngredients = {
-            'green-tea': 250,
-            'grape': 40
-        };
-    } else if (currentDrink === 'Lychee Tea') {
-        requiredIngredients = {
-            'lychee': 20,
-            'water': 250 // Water cold state will be handled separately
-        };
-    } else {
-        alert('No drink selected!');
+    if (!recipes[currentDrink]) {
+        alert('No recipe found for this drink!');
         return false;
     }
+
+    const requiredIngredients = recipes[currentDrink];
 
     // Check if only the required ingredients are present
     for (let summaryItem of summaryItems) {
@@ -152,7 +155,7 @@ function validateIngredients() {
     }
 
     // Check if required ingredients are in the summary list
-    for (let [ingredient, requiredQuantity] of Object.entries(requiredIngredients)) {
+    for (let [ingredient, requiredData] of Object.entries(requiredIngredients)) {
         const summaryItem = Array.from(summaryItems).find(item => item.dataset.ingredient === ingredient);
 
         if (!summaryItem) {
@@ -161,18 +164,20 @@ function validateIngredients() {
         }
 
         const quantity = parseInt(summaryItem.querySelector('.quantity').textContent, 10);
+        const requiredQuantity = typeof requiredData === 'object' ? requiredData.quantity : requiredData;
+
         if (quantity < requiredQuantity) {
             alert(`Insufficient quantity of ${ingredient.replace(/-/g, ' ')}. Required: ${requiredQuantity}, Available: ${quantity}`);
             return false;
         }
-    }
 
-    // Special check for water state (cold/hot)
-    if (currentDrink === 'Lychee Tea') {
-        const waterState = document.getElementById('toggle-water-btn').dataset.state;
-        if (waterState !== 'cold') {
-            alert('Water must be cold for Lychee Tea!');
-            return false;
+        // Special check for water state (if applicable)
+        if (ingredient === 'water' && requiredData.state) {
+            const waterState = document.getElementById('toggle-water-btn').dataset.state;
+            if (waterState !== requiredData.state) {
+                alert(`Water must be ${requiredData.state} for ${currentDrink}!`);
+                return false;
+            }
         }
     }
 
@@ -181,7 +186,6 @@ function validateIngredients() {
 
 // Serve button click event listener
 document.getElementById('serve-btn').addEventListener('click', function() {
-    console.log('Serve button clicked');
     if (validateIngredients()) {
         const summaryListItems = document.querySelectorAll('#summary-list button');
         const ingredients = Array.from(summaryListItems).map(item => ({
