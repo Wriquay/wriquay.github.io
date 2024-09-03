@@ -1,7 +1,7 @@
 const recipes = {
   "Grape Tea": {
     "green-tea": 250,
-    "crystal-boba": 1,
+    "crystal-boba": 5,
     "grape": 40,
   },
   "Lychee Tea": {
