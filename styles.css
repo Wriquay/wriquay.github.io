@@ -242,7 +242,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #drink-container, #instructions, #inventory-container, #tea-container {
+    #drink-container, #instructions, #inventory-container, topping-container, #tea-container {
         width: 100%;
         margin: 10px 0;
     }
