@@ -41,7 +41,7 @@ body {
     width: calc(33% - 20px);
 }
 
-#drink-container h2, #instructions h2, #tea-container h2, #summary h2,#topping-container,  #inventory-container h2 {
+#drink-container h2, #score h2, #tea-container h2, #summary h2,#topping-container,  #inventory-container h2 {
     margin-top: 0;
     font-size: 12px;
 }
@@ -270,7 +270,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #drink-container, #score, #inventory-container, #topping-container, #tea-container {
+    #drink-score, #inventory-container, #topping-container, #tea-container {
         width: 100%;
         margin: 10px 0;
     }
