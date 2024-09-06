@@ -16,8 +16,9 @@ body {
 }
 
 #drink-score {
-    display: flex;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
 }
@@ -28,7 +29,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 10px;
-    width: 70%;
+    width: calc(70% - 20px);
 }
 
 #score {
@@ -37,7 +38,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 10px;
-    width: 30%;
+    width: calc(30% - 20px);
 }
 
 #topping-container, #inventory-container, #tea-container {
