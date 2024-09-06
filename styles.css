@@ -269,7 +269,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #inventory-container, #topping-container, #tea-container {
+    #drink-score, #inventory-container, #topping-container, #tea-container {
         width: 100%;
         margin: 10px 0;
     }
