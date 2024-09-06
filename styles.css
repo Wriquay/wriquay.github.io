@@ -16,12 +16,10 @@ body {
 }
 
 #drink-score {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 200px;
 }
 
 #drink-container {
@@ -34,7 +32,7 @@ body {
 }
 
 #score {
-    background-color: #fff;
+    background-color: #ababab;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
