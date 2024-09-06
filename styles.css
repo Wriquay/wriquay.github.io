@@ -50,7 +50,7 @@ body {
     width: calc(33% - 20px);
 }
 
-#drink-container h2, #score h2, #tea-container h2, #summary h2,#topping-container,  #inventory-container h2 {
+#drink-container h2, #score h2, #tea-container h2, #summary h2, #topping-container h2,  #inventory-container h2 {
     margin-top: 0;
     font-size: 12px;
 }
