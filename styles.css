@@ -17,9 +17,8 @@ body {
 
 #drink-score {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between; /* Ensures even spacing between the two sections */
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -29,16 +28,16 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 10px;
-    width: calc(70% - 20px);
+    width: 70%; /* Takes up 70% of the container width */
 }
 
 #score {
-    background-color: #ababab;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     margin: 10px;
-    width: calc(30% - 20px);
+    width: 30%; /* Takes up 30% of the container width */
 }
 
 #topping-container, #inventory-container, #tea-container {
