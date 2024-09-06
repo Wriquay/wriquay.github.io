@@ -11,7 +11,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    height: 80vh;
+    height: 80vh; /* Increases the height of the container by 20px */
     position: relative;
 }
 
@@ -176,13 +176,23 @@ body {
     background-color: #45a049;
 }
 
+#spacer {
+    padding: 100px;
+    margin: 10px;
+    width: 100vw; /* viewport width */
+}
+
 #summary {
+	position: fixed;
+	bottom: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     width: 80%;
     margin: 20px auto;
+	cursor: pointer;
+    z-index: 1000;
 }
 
 #summary h2 {
