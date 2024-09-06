@@ -43,6 +43,7 @@ body {
 
 #drink-container h2, #instructions h2, #tea-container h2, #summary h2,#topping-container,  #inventory-container h2 {
     margin-top: 0;
+    font-size: 12px;
 }
 
 
