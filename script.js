@@ -7,7 +7,7 @@ const recipes = {
   "Lychee Tea": {
     "lychee": 20,
     "lychee-jello": 1,
-    "dragon: 5,
+    "dragon": 5,
     "water": {
       "quantity": 250,
       "state": "cold"
