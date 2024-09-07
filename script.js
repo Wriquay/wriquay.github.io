@@ -74,7 +74,7 @@ document.querySelectorAll('.topping-item button').forEach(button => {
             }
         } else if (this.classList.contains('decrease-btn')) {
             if (currentQuantity > 0) {
-                currentQuantity = Math.max(currentQuantity - 1, 2); // Ensure it doesn't go below 0
+                currentQuantity = Math.max(currentQuantity - 1, 0); // Ensure it doesn't go below 0
                 quantitySpan.textContent = currentQuantity;
             }
         }
