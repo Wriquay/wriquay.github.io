@@ -4,6 +4,16 @@ const recipes = {
     "crystal-boba": 1,
     "grape": 40,
   },
+  "Perals Milk Tea": {
+    "black-tea": 250,
+    "milk": 100,
+    "peral": 1,
+  },
+  "Grass Jelly Milk Tea": {
+    "black-tea": 250,
+    "grass-jelly": 1,
+    "milk": 100,
+  },
   "Lychee Tea": {
     "lychee": 20,
     "lychee-jello": 1,
@@ -17,7 +27,7 @@ const recipes = {
 
 // Function to randomly select a drink and update the "Current Drink" section
 function updateCurrentDrink() {
-    const drinks = ['Grape Tea', 'Lychee Tea'];
+    const drinks = ['Grape Tea', 'Peral Milk Tea', 'Grass Jelly Milk Tea', 'Lychee Tea'];
     const randomDrink = drinks[Math.floor(Math.random() * drinks.length)];
     document.getElementById('drink-name').textContent = randomDrink;
 }
@@ -69,12 +79,12 @@ document.querySelectorAll('.topping-item button').forEach(button => {
 
         if (this.classList.contains('increase-btn')) {
             if (currentQuantity < 2) {
-                currentQuantity = Math.min(currentQuantity + 1, 2); // Ensure it doesn't exceed 60
+                currentQuantity = Math.min(currentQuantity + 0.5, 2); // Ensure it doesn't exceed 60
                 quantitySpan.textContent = currentQuantity;
             }
         } else if (this.classList.contains('decrease-btn')) {
             if (currentQuantity > 0) {
-                currentQuantity = Math.max(currentQuantity - 1, 0); // Ensure it doesn't go below 0
+                currentQuantity = Math.max(currentQuantity - 0.5, 0); // Ensure it doesn't go below 0
                 quantitySpan.textContent = currentQuantity;
             }
         }
