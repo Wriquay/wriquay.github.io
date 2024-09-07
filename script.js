@@ -240,11 +240,33 @@ function validateIngredients() {
     return true;
 }
 
-// Set initial countdown time (in seconds)
+// Set the countdown time (in seconds)
 let countdownTime = 60;
 
-// Timer display element
+// Get the timer element
 const timerDisplay = document.getElementById('count-down');
+
+// Function to update the timer display
+function updateTimer() {
+    let minutes = Math.floor(countdownTime / 60);
+    let seconds = countdownTime % 60;
+    
+    // Format seconds and minutes to be two digits
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    timerDisplay.textContent = `${minutes}:${seconds}`;
+
+    if (countdownTime > 0) {
+        countdownTime--;
+    } else {
+        clearInterval(timerInterval);
+        timerDisplay.textContent = "Time's up!";
+    }
+}
+
+// Start the countdown
+let timerInterval = setInterval(updateTimer, 1000);
 
 // Serve button click event listener
 document.getElementById('serve-btn').addEventListener('click', function() {
