@@ -1,7 +1,7 @@
 const recipes = {
   "Grape Tea": {
     "green-tea": 250,
-    "crystal-boba": 5,
+    "crystal-boba": 1,
     "grape": 40,
   },
   "Lychee Tea": {
@@ -66,13 +66,13 @@ document.querySelectorAll('.topping-item button').forEach(button => {
         let currentQuantity = parseInt(quantitySpan.textContent, 10);
 
         if (this.classList.contains('increase-btn')) {
-            if (currentQuantity < 60) {
-                currentQuantity = Math.min(currentQuantity + 5, 60); // Ensure it doesn't exceed 60
+            if (currentQuantity < 2) {
+                currentQuantity = Math.min(currentQuantity + 1, 2); // Ensure it doesn't exceed 60
                 quantitySpan.textContent = currentQuantity;
             }
         } else if (this.classList.contains('decrease-btn')) {
             if (currentQuantity > 0) {
-                currentQuantity = Math.max(currentQuantity - 5, 0); // Ensure it doesn't go below 0
+                currentQuantity = Math.max(currentQuantity - 1, 2); // Ensure it doesn't go below 0
                 quantitySpan.textContent = currentQuantity;
             }
         }
