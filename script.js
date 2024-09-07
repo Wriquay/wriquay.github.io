@@ -4,7 +4,7 @@ const recipes = {
     "crystal-boba": 1,
     "grape": 40,
   },
-  "Perals Milk Tea": {
+  "Peral Milk Tea": {
     "black-tea": 250,
     "milk": 100,
     "peral": 1,
