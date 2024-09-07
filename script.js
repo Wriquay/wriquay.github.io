@@ -4,6 +4,12 @@ const recipes = {
     "crystal-boba": 1,
     "grape": 40,
   },
+  "Grass Jelly Milk Tea": {
+    "green-tea": 250,
+    "grass-jelly": 1,
+    "milk": 100,
+    "black-tea": 250,
+  },
   "Lychee Tea": {
     "lychee": 20,
     "water": {
