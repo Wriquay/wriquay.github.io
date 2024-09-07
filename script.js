@@ -144,7 +144,7 @@ function addToSummary(ingredient, quantity) {
     if (existingItem) {
         // Update existing item quantity
         const quantitySpan = existingItem.querySelector('.quantity');
-        const currentQuantity = parseInt(quantitySpan.textContent, 10);
+        const currentQuantity = parseFloat(quantitySpan.textContent, 10);
         quantitySpan.textContent = currentQuantity + quantity;
     } else {
         // Add new item to the list
@@ -218,7 +218,7 @@ function validateIngredients() {
             return false;
         }
 
-        const quantity = parseInt(summaryItem.querySelector('.quantity').textContent, 10);
+        const quantity = parseFloat(summaryItem.querySelector('.quantity').textContent, 10);
         const requiredQuantity = typeof requiredData === 'object' ? requiredData.quantity : requiredData;
 
         if (quantity < requiredQuantity) {
@@ -246,7 +246,7 @@ document.getElementById('serve-btn').addEventListener('click', function() {
         const summaryListItems = document.querySelectorAll('#summary-list button');
         const ingredients = Array.from(summaryListItems).map(item => ({
             ingredient: item.dataset.ingredient,
-            quantity: parseInt(item.querySelector('.quantity').textContent, 10)
+            quantity: parseFloat(item.querySelector('.quantity').textContent, 10)
         }));
 
         console.log('Serving the following ingredients:');
