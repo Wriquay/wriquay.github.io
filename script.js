@@ -240,6 +240,12 @@ function validateIngredients() {
     return true;
 }
 
+// Set initial countdown time (in seconds)
+let countdownTime = 60;
+
+// Timer display element
+const timerDisplay = document.getElementById('count-down');
+
 // Serve button click event listener
 document.getElementById('serve-btn').addEventListener('click', function() {
     if (validateIngredients()) {
