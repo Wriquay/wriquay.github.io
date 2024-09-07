@@ -75,7 +75,7 @@ document.querySelectorAll('.topping-item button').forEach(button => {
     button.addEventListener('click', function() {
         const ingredient = this.dataset.ingredient;
         const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
-        let currentQuantity = parseInt(quantitySpan.textContent, 10);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
 
         if (this.classList.contains('increase-btn')) {
             if (currentQuantity < 2) {
