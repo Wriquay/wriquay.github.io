@@ -167,6 +167,15 @@ document.getElementById('toggle-water-btn').addEventListener('click', function()
     }
 });
 
+// Initialize the score
+let score = 0;
+
+// Function to update the score display
+function updateScore() {
+    const scoreElement = document.getElementById('drink-points');
+    scoreElement.textContent = score.toString().padStart(2, '0');
+}
+
 // Function to validate if the ingredients match the current drink
 function validateIngredients() {
     const currentDrink = document.getElementById('drink-name').textContent;
@@ -215,6 +224,7 @@ function validateIngredients() {
         }
     }
 
+    // If all validations passed, return true
     return true;
 }
 
@@ -234,6 +244,10 @@ document.getElementById('serve-btn').addEventListener('click', function() {
 
         // Clear the summary list after serving
         document.getElementById('summary-list').innerHTML = '';
+
+        // Increment the score and update the display
+        score += 1;
+        updateScore();
 
         // Optionally, update the current drink to a new random drink after serving
         updateCurrentDrink();
