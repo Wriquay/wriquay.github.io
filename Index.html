@@ -8,18 +8,27 @@
 </head>
 <body>
     <div id="game-container">
+		<div id="top-spacer">
+        </div>
+		
         <div id="drink-score">
-        <!-- Drink Container Section -->
-        <div id="drink-container">
-            <h2>Current Drink</h2>
-            <p id="drink-name">None</p>
-        </div>
-
-        <!-- Score Section -->
-        <div id="score">
-            <h2>Score</h2>
-            <p id="drink-points">00</p>
-        </div>
+			<!-- Drink Container Section -->
+			<div id="drink-container">
+				<h2>Current Drink</h2>
+				<p id="drink-name">None</p>
+			</div>
+			
+			<!-- Timer Section -->
+			<div id="timer">
+				<h2>Time</h2>
+				<p id="count-down">00</p>
+			</div>
+		
+			<!-- Score Section -->
+			<div id="score">
+				<h2>Score</h2>
+				<p id="drink-points">00</p>
+			</div>
         </div>
 
         <!-- Teas Section -->
@@ -168,7 +177,7 @@
             </div>
         </div>
 		
-		<div id="spacer">
+		<div id="bot-spacer">
         </div>
 		
         <!-- Summary Section -->
@@ -180,6 +189,37 @@
             <button id="serve-btn">Serve</button>
         </div>
     </div>
+	
+<script>
+  // Function to adjust the height of the bot-spacer
+  function adjustBotSpacerHeight() {
+    var summary = document.getElementById('summary');
+    var botSpacer = document.getElementById('bot-spacer');
+
+    if (summary && botSpacer) {
+      var summaryHeight = summary.offsetHeight;
+      botSpacer.style.height = (summaryHeight + 50) + 'px';
+    }
+  }
+
+  // Use ResizeObserver to watch for changes in the summary element
+  function observeSummary() {
+    var summary = document.getElementById('summary');
+    if (summary) {
+      // Create a new ResizeObserver instance
+      var resizeObserver = new ResizeObserver(adjustBotSpacerHeight);
+
+      // Start observing the summary element
+      resizeObserver.observe(summary);
+      
+      // Call adjustBotSpacerHeight initially to set the height correctly
+      adjustBotSpacerHeight();
+    }
+  }
+
+  // Run the observeSummary function on page load
+  window.onload = observeSummary;
+</script>
 
     <script src="script.js"></script>
 </body>
