@@ -60,13 +60,7 @@
                     <input type="number" class="quantity-input" data-ingredient="water" value="0" min="0" max="300">
                     <button class="tea-increase-btn" data-ingredient="water">+</button>
                     <button id="toggle-water-btn" data-state="cold">Cold</button>
-                </div>
-                <div class="tea-item">
-                    <span>Milk</span>
-                    <button class="tea-decrease-btn" data-ingredient="milk">-</button>
-                    <input type="number" class="quantity-input" data-ingredient="milk" value="0" min="0" max="300">
-                    <button class="tea-increase-btn" data-ingredient="milk">+</button>
-                </div>
+                </div>
             </div>
         </div>
 
@@ -174,6 +168,21 @@
 
             <!-- Ingredients section -->
         <div id="inventory-container">
+            <div class="dairy-section">
+                <h2>Milk&Creamer</h2>
+                <div class="dairy-item">
+                    <span>Milk</span>
+                    <button class="decrease-btn" data-ingredient="milk">-</button>
+                    <span class="quantity" data-ingredient="milk">0</span>
+                    <button class="increase-btn" data-ingredient="milk">+</button>
+                </div>
+				<div class="inventory-item">
+                    <span>Creamer</span>
+                    <button class="decrease-btn" data-ingredient="creamer">-</button>
+                    <span class="quantity" data-ingredient="creamer">0</span>
+                    <button class="increase-btn" data-ingredient="creamer">+</button>
+                </div>
+            </div>
             <div class="inventory-section">
                 <h2>Syrups</h2>
                 <div class="inventory-item">
