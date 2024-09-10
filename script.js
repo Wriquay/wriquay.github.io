@@ -169,6 +169,19 @@ document.getElementById('add-all-btn').addEventListener('click', function() {
 });
 
 document.getElementById('add-all-btn').addEventListener('click', function() {
+    const inventoryItems = document.querySelectorAll('.dairy-item');
+    inventoryItems.forEach(item => {
+        const ingredient = item.querySelector('.quantity').dataset.ingredient;
+        const quantity = parseInt(item.querySelector('.quantity').textContent, 10);
+
+        if (quantity > 0) {
+            addToSummary(ingredient, quantity);
+            item.querySelector('.quantity').textContent = '0'; // Reset quantity
+        }
+    });
+});
+
+document.getElementById('add-all-btn').addEventListener('click', function() {
     const inventoryItems = document.querySelectorAll('.topping-item');
     inventoryItems.forEach(item => {
         const ingredient = item.querySelector('.quantity').dataset.ingredient;
