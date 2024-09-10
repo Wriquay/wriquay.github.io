@@ -8,7 +8,7 @@ const recipes = {
   "Peral Milk Tea": {
     "black-tea": 250,
     "milk": 100,
-    "sugar": 30
+    "sugar": 30,
     "peral": 1,
   },
   "Grass Jelly Milk Tea": {
