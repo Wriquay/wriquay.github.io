@@ -276,7 +276,7 @@ function validateIngredients() {
         const requiredQuantity = typeof requiredData === 'object' ? requiredData.quantity : requiredData;
 
         if (quantity < requiredQuantity) {
-            alert(`Insufficient quantity of ${ingredient.replace(/-/g, ' ')}. Required: ${requiredQuantity}, Available: ${quantity}`);
+            alert(`Insufficient quantity of ${ingredient.replace(/-/g, ' ')}. Required: ${requiredQuantity}, Currently: ${quantity}`);
             return false;
         }
 
