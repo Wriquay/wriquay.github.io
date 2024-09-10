@@ -57,7 +57,7 @@ body {
     width: 20%; /* Takes up 30% of the container width */
 }
 
-#topping-container, #inventory-container, #tea-container {
+#topping-container, #sugar-container, #ice-container, #inventory-container, #tea-container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -66,14 +66,22 @@ body {
     width: calc(33% - 20px);
 }
 
-#drink-container h2, #timer h2, #score h2, #tea-container h2, #summary h2, #topping-container h2, #inventory-container h2 {
-    margin-top: 0;
-    font-size: 12px;
+.sugar-section {
+    display: flex;
+	justify-content: center;
+	gap: 5px;
 }
 
+.sugar-amount1, .sugar-amount2, .sugar-amount3, .sugar-amount4 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+	gap: 5px;
+}
 
-.tea-section {
-    margin-bottom: 20px;
+#drink-container h2, #timer h2, #score h2, #ice-container h2, #tea-container h2, #sugar-container h2, #summary h2, #topping-container h2, #inventory-container h2 {
+    margin-top: 0;
+    font-size: 12px;
 }
 
 .tea-item {
@@ -105,7 +113,22 @@ body {
     background-color: #ababab;
 }
 
-#add-tea-btn {
+.sugar-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	width: 65px;
+}
+
+.sugar-btn:hover {
+    background-color: #45a049;
+}
+
+#add-ice-btn {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -116,12 +139,8 @@ body {
     cursor: pointer;
 }
 
-#add-tea-btn:hover {
+#add-ice-btn:hover {
     background-color: #45a049;
-}
-
-.topping-section {
-    margin-bottom: 20px;
 }
 
 .topping-item {
@@ -152,22 +171,6 @@ body {
 .topping-decrease-btn:hover, .topping-increase-btn:hover {
     background-color: #ababab;
 }
-
-#add-topping-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#add-topping-btn:hover {
-    background-color: #45a049;
-}
-
 
 .inventory-item {
     margin: 10px 0;
@@ -205,7 +208,6 @@ body {
 }
 
 #add-all-btn {
-    margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4CAF50;
@@ -231,13 +233,22 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     width: 80%;
-    margin: 20px auto;
+    margin: 0px auto;
 	cursor: pointer;
     z-index: 1000;
 }
 
-#summary h2 {
-    margin-top: 0;
+.summary-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.summary-head h2 {
+    margin: 0;
+    flex: 1; /* This allows the h2 to take up remaining space */
+    text-align: center;
 }
 
 #summary-list {
@@ -293,7 +304,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #inventory-container, #topping-container, #tea-container {
+    #inventory-container, #sugar-container, #ice-container, #topping-container, #tea-container {
         width: 100%;
         margin: 10px 0;
     }
