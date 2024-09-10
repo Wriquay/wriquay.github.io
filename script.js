@@ -62,6 +62,26 @@ document.querySelectorAll('.inventory-item button').forEach(button => {
     });
 });
 
+document.querySelectorAll('.dairy-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 100) {
+                currentQuantity = Math.min(currentQuantity + 10, 100); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 100) {
+                currentQuantity = Math.max(currentQuantity - 10, 100); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
 document.querySelectorAll('.ice-item button').forEach(button => {
     button.addEventListener('click', function() {
         const ingredient = this.dataset.ingredient;
