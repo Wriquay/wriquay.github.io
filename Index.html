@@ -67,7 +67,36 @@
                     <input type="number" class="quantity-input" data-ingredient="milk" value="0" min="0" max="300">
                     <button class="tea-increase-btn" data-ingredient="milk">+</button>
                 </div>
-                <button id="add-tea-btn">Add Teas</button>
+            </div>
+        </div>
+
+        <div id="sugar-container">
+            <h2>Sugar</h2>
+            <div class="sugar-section">
+                <div class="sugar-amount1">
+					<button class="sugar-btn" data-sugar="5">5</button>
+					<button class="sugar-btn" data-sugar="8">8</button>
+					<button class="sugar-btn" data-sugar="10">10</button>
+					<button class="sugar-btn" data-sugar="15">15</button>
+				</div>
+				<div class="sugar-amount2">
+					<button class="sugar-btn" data-sugar="20">20</button>
+					<button class="sugar-btn" data-sugar="30">30</button>
+					<button class="sugar-btn" data-sugar="40">40</button>
+					<button class="sugar-btn" data-sugar="60">60</button>
+				</div>
+				<div class="sugar-amount3">
+					<button class="sugar-btn" data-sugar="3-1">3-1</button>
+					<button class="sugar-btn" data-sugar="12">12</button>
+					<button class="sugar-btn" data-sugar="3-2">3-2</button>
+					<button class="sugar-btn" data-sugar="25">25</button>
+				</div>
+				<div class="sugar-amount4">
+					<button class="sugar-btn" data-sugar="4-1">4-1</button>
+					<button class="sugar-btn" data-sugar="4-2">4-2</button>
+					<button class="sugar-btn" data-sugar="4-3">4-3</button>
+					<button class="sugar-btn" data-sugar="4-4">4-4</button>
+                </div>
             </div>
         </div>
 
@@ -106,9 +135,9 @@
                 </div>
                 <div class="topping-item">
                     <span>Diced Mango</span>
-                    <button class="decrease-btn" data-ingredient="mango-bits">-</button>
-                    <span class="quantity" data-ingredient="mango-bits">0</span>
-                    <button class="increase-btn" data-ingredient="mango-bits">+</button>
+                    <button class="decrease-btn" data-ingredient="diced-mangos">-</button>
+                    <span class="quantity" data-ingredient="diced-mangos">0</span>
+                    <button class="increase-btn" data-ingredient="diced-mangos">+</button>
                 </div>
                 <div class="topping-item">
                     <span>Crystal Boba</span>
@@ -140,15 +169,13 @@
                     <span class="quantity" data-ingredient="bs-syrup">0</span>
                     <button class="increase-btn" data-ingredient="bs-syrup">+</button>
                 </div>
-                <button id="add-topping-btn">Add Toppings</button>
-
             </div>
         </div>
 
             <!-- Ingredients section -->
         <div id="inventory-container">
             <div class="inventory-section">
-                <h2>Ingredients</h2>
+                <h2>Syrups</h2>
                 <div class="inventory-item">
                     <span>Grape</span>
                     <button class="decrease-btn" data-ingredient="grape">-</button>
@@ -197,7 +224,20 @@
                     <span class="quantity" data-ingredient="peach">0</span>
                     <button class="increase-btn" data-ingredient="peach">+</button>
                 </div>
-                <button id="add-all-btn">Add All</button>
+            </div>
+        </div>
+		
+        <div id="ice-container">
+            <h2>Ice</h2>
+            <div class="ice-section">
+                <div class="ice-item">
+                    <span>Ice</span>
+                    <button class="decrease-btn" data-ingredient="ice">-</button>
+                    <span class="quantity" data-ingredient="ice">300</span>
+                    <button class="increase-btn" data-ingredient="ice">+</button>
+                </div>
+                <button id="add-ice-btn">Add Ice</button>
+
             </div>
         </div>
 		
@@ -206,10 +246,13 @@
 		
         <!-- Summary Section -->
         <div id="summary">
-            <h2>In Drink</h2>
-            <ul id="summary-list">
+			<div class="summary-head">
+				<h2>In Drink</h2>
+				<button id="add-all-btn">Add All</button>
+			</div>
+				<ul id="summary-list">
                 <!-- Summary items will be added here -->
-            </ul>
+				</ul>
             <button id="serve-btn">Serve</button>
         </div>
     </div>
