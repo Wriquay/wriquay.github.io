@@ -178,7 +178,7 @@ document.querySelectorAll('.sugar-btn').forEach(button => {
     button.addEventListener('click', function() {
         const sugarAmount = this.dataset.sugar; // Extract the data-sugar value
 
-        const ingredient = "Sugar";
+        const ingredient = "sugar"; // Ensure it's lowercase
         const quantity = parseInt(sugarAmount, 10); // Convert to integer
 
         if (quantity > 0) {
@@ -200,9 +200,10 @@ function addToSummary(ingredient, quantity) {
     } else {
         // Add new item to the list
         const newItem = document.createElement('button');
-        newItem.dataset.ingredient = ingredient;
+        
+        // Ensure ingredient name is in lowercase, for consistency with the recipes object
+        newItem.dataset.ingredient = ingredient.toLowerCase();
 
-        // Handle water state
         if (ingredient === 'water') {
             const waterState = document.getElementById('toggle-water-btn').dataset.state;
             newItem.innerHTML = `Water (${waterState}): <span class="quantity">${quantity}</span>`;
