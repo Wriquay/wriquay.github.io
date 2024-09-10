@@ -2,21 +2,25 @@ const recipes = {
   "Grape Tea": {
     "green-tea": 250,
     "crystal-boba": 1,
+    "sugar": 20,
     "grape": 40,
   },
   "Peral Milk Tea": {
     "black-tea": 250,
     "milk": 100,
+    "sugar": 30
     "peral": 1,
   },
   "Grass Jelly Milk Tea": {
     "black-tea": 250,
     "grass-jelly": 1,
+    "sugar": 30,
     "milk": 100,
   },
   "Lychee Tea": {
     "lychee": 20,
     "lychee-jello": 1,
+    "sugar": 25,
     "dragon": 5,
     "water": {
       "quantity": 250,
