@@ -143,18 +143,18 @@ body {
     background-color: #45a049;
 }
 
-.topping-item {
+.topping-item, .dairy-item, .inventory-item {
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.topping-item span {
+.topping-item, .dairy-item, .inventory-item span {
     margin: 0 10px;
 }
 
-.topping-item input.quantity-input {
+.topping-item, .dairy-item, .inventory-item input.quantity-input {
     width: 60px;
     text-align: center;
     margin: 0 10px;
@@ -170,24 +170,7 @@ body {
 
 .topping-decrease-btn:hover, .topping-increase-btn:hover {
     background-color: #ababab;
-}
-
-.inventory-item {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inventory-item span {
-    margin: 0 10px;
-}
-
-.inventory-item input.quantity-input {
-    width: 60px;
-    text-align: center;
-    margin: 0 10px;
-}
+}
 
 .decrease-btn, .increase-btn {
     padding: 5px 10px;
