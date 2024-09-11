@@ -79,7 +79,7 @@ body {
 	gap: 5px;
 }
 
-#drink-container h2, #timer h2, #score h2, #ice-container h2, #tea-container h2, #sugar-container h2, #summary h2, #topping-container h2, #inventory-container h2 {
+#drink-score h2, #ice-container h2, #tea-container h2, #sugar-container h2, #summary h2, #topping-container h2, #inventory-container h2 {
     margin-top: 0;
     font-size: 12px;
 }
@@ -128,6 +128,10 @@ body {
     background-color: #45a049;
 }
 
+.ice-section {
+	padding: 20px 0px;
+}
+
 #add-ice-btn {
     margin-top: 20px;
     padding: 10px 20px;
@@ -141,6 +145,23 @@ body {
 
 #add-ice-btn:hover {
     background-color: #45a049;
+}
+
+.powder-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.powder-item span {
+    margin: 0 10px;
+}
+
+.powder-item input.quantity-input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
 }
 
 .dairy-item {
@@ -177,6 +198,74 @@ body {
     margin: 0 10px;
 }
 
+.additonal-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.additonal-item span {
+    margin: 0 10px;
+}
+
+.additonal-item input.quantity-input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.straw-ava-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.straw-ava-item span {
+    margin: 0 10px;
+}
+
+.straw-ava-item input.quantity-input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.watermelon-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watermelon-item span {
+    margin: 0 10px;
+}
+
+.watermelon-item input.quantity-input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.matcha-item {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.matcha-item span {
+    margin: 0 10px;
+}
+
+.matcha-item input.quantity-input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+}
+
 .topping-item {
     margin: 10px 0;
     display: flex;
@@ -196,7 +285,8 @@ body {
 
 .topping-decrease-btn:hover, .topping-increase-btn:hover {
     background-color: #ababab;
-}
+}
+
 
 .decrease-btn, .increase-btn {
     padding: 5px 10px;
