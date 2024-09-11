@@ -70,12 +70,12 @@ document.querySelectorAll('.dairy-item button').forEach(button => {
 
         if (this.classList.contains('increase-btn')) {
             if (currentQuantity < 100) {
-                currentQuantity = Math.min(currentQuantity + 10, 100); // Ensure it doesn't exceed 60
+                currentQuantity = Math.min(currentQuantity + 10, 100); 
                 quantitySpan.textContent = currentQuantity;
             }
         } else if (this.classList.contains('decrease-btn')) {
-            if (currentQuantity > 100) {
-                currentQuantity = Math.max(currentQuantity - 10, 100); // Ensure it doesn't go below 0
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 10, 0); 
                 quantitySpan.textContent = currentQuantity;
             }
         }
@@ -90,12 +90,12 @@ document.querySelectorAll('.ice-item button').forEach(button => {
 
         if (this.classList.contains('increase-btn')) {
             if (currentQuantity < 600) {
-                currentQuantity = Math.min(currentQuantity + 50, 600); // Ensure it doesn't exceed 60
+                currentQuantity = Math.min(currentQuantity + 50, 600); 
                 quantitySpan.textContent = currentQuantity;
             }
         } else if (this.classList.contains('decrease-btn')) {
             if (currentQuantity > 300) {
-                currentQuantity = Math.max(currentQuantity - 50, 300); // Ensure it doesn't go below 0
+                currentQuantity = Math.max(currentQuantity - 50, 300); 
                 quantitySpan.textContent = currentQuantity;
             }
         }
@@ -115,7 +115,7 @@ document.getElementById('add-ice-btn').addEventListener('click', function() {
     });
 });
 
-document.querySelectorAll('.topping-item button').forEach(button => {
+document.querySelectorAll('#topping-container button').forEach(button => {
     button.addEventListener('click', function() {
         const ingredient = this.dataset.ingredient;
         const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
@@ -129,6 +129,86 @@ document.querySelectorAll('.topping-item button').forEach(button => {
         } else if (this.classList.contains('decrease-btn')) {
             if (currentQuantity > 0) {
                 currentQuantity = Math.max(currentQuantity - 0.5, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.additonal-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 5) {
+                currentQuantity = Math.min(currentQuantity + 1, 5); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 1, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.straw-ava-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 2) {
+                currentQuantity = Math.min(currentQuantity + .25, 2); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - .25, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.watermelon-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 400) {
+                currentQuantity = Math.min(currentQuantity + 100, 400); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 100, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.matcha-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 20) {
+                currentQuantity = Math.min(currentQuantity + 5, 20); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 5, 0); // Ensure it doesn't go below 0
                 quantitySpan.textContent = currentQuantity;
             }
         }
@@ -156,33 +236,41 @@ document.querySelectorAll('.tea-item button').forEach(button => {
 });
 
 document.getElementById('add-all-btn').addEventListener('click', function() {
-    const inventoryItems = document.querySelectorAll('.inventory-item');
-    inventoryItems.forEach(item => {
-        const ingredient = item.querySelector('.quantity').dataset.ingredient;
-        const quantity = parseInt(item.querySelector('.quantity').textContent, 10);
-
-        if (quantity > 0) {
-            addToSummary(ingredient, quantity);
-            item.querySelector('.quantity').textContent = '0'; // Reset quantity
-        }
-    });
-});
-
-document.getElementById('add-all-btn').addEventListener('click', function() {
-    const inventoryItems = document.querySelectorAll('.dairy-item');
-    inventoryItems.forEach(item => {
-        const ingredient = item.querySelector('.quantity').dataset.ingredient;
-        const quantity = parseInt(item.querySelector('.quantity').textContent, 10);
-
-        if (quantity > 0) {
-            addToSummary(ingredient, quantity);
-            item.querySelector('.quantity').textContent = '0'; // Reset quantity
-        }
+    // Select each section within the shaker-container
+    const sections = document.querySelectorAll('#inventory-container .dairy-section, #inventory-container .inventory-section, #inventory-container .additonal-section');
+    
+    sections.forEach(section => {
+        // Select each item within the current section
+        const items = section.querySelectorAll('.dairy-item, .inventory-item, .additonal-item, .straw-ava-item, .watermelon-item, .matcha-item');
+        
+        items.forEach(item => {
+            const ingredient = item.querySelector('.quantity').dataset.ingredient;
+            const quantity = parseFloat(item.querySelector('.quantity').textContent, 10);
+            
+            if (quantity > 0) {
+                addToSummary(ingredient, quantity);
+                item.querySelector('.quantity').textContent = '0'; // Reset quantity
+            }
+        });
     });
 });
 
 document.getElementById('add-all-btn').addEventListener('click', function() {
     const inventoryItems = document.querySelectorAll('.topping-item');
+    inventoryItems.forEach(item => {
+        const ingredient = item.querySelector('.quantity').dataset.ingredient;
+        const quantity = parseFloat(item.querySelector('.quantity').textContent, 10);
+
+        if (quantity > 0) {
+            addToSummary(ingredient, quantity);
+            item.querySelector('.quantity').textContent = '0'; // Reset quantity
+        }
+    });
+});
+
+
+document.getElementById('add-all-btn').addEventListener('click', function() {
+    const inventoryItems = document.querySelectorAll('.powder-item');
     inventoryItems.forEach(item => {
         const ingredient = item.querySelector('.quantity').dataset.ingredient;
         const quantity = parseFloat(item.querySelector('.quantity').textContent, 10);
