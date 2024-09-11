@@ -60,7 +60,8 @@
                     <input type="number" class="quantity-input" data-ingredient="water" value="0" min="0" max="300">
                     <button class="tea-increase-btn" data-ingredient="water">+</button>
                     <button id="toggle-water-btn" data-state="cold">Cold</button>
-                </div>
+                </div>
+
             </div>
         </div>
 
@@ -95,8 +96,8 @@
         </div>
 
         <div id="topping-container">
+		    <div class="topping-section">
             <h2>Toppings</h2>
-            <div class="topping-section">
                 <div class="topping-item">
                     <span>Perals</span>
                     <button class="decrease-btn" data-ingredient="peral">-</button>
@@ -110,22 +111,46 @@
                     <button class="increase-btn" data-ingredient="taro-balls">+</button>
                 </div>
                 <div class="topping-item">
+                    <span>Jasmine Jello</span>
+                    <button class="decrease-btn" data-ingredient="jasmine-jello">-</button>
+                    <span class="quantity" data-ingredient="jasmine-jello">0</span>
+                    <button class="increase-btn" data-ingredient="jasmine-jello">+</button>
+                </div>                
+				<div class="topping-item">
+                    <span>Crystal Boba</span>
+                    <button class="decrease-btn" data-ingredient="crystal-boba">-</button>
+                    <span class="quantity" data-ingredient="crystal-boba">0</span>
+                    <button class="increase-btn" data-ingredient="crystal-boba">+</button>
+                </div>                
+				<div class="topping-item">
+                    <span>Grass Jelly</span>
+                    <button class="decrease-btn" data-ingredient="grass-jelly">-</button>
+                    <span class="quantity" data-ingredient="grass-jelly">0</span>
+                    <button class="increase-btn" data-ingredient="grass-jelly">+</button>
+                </div>                
+				<div class="topping-item">
+                    <span>Lychee Jello</span>
+                    <button class="decrease-btn" data-ingredient="lychee-jello">-</button>
+                    <span class="quantity" data-ingredient="lychee-jello">0</span>
+                    <button class="increase-btn" data-ingredient="lychee-jello">+</button>
+                </div>                
+				<div class="topping-item">
+                    <span>Sago</span>
+                    <button class="decrease-btn" data-ingredient="sago">-</button>
+                    <span class="quantity" data-ingredient="sago">0</span>
+                    <button class="increase-btn" data-ingredient="sago">+</button>
+                </div>
+				<div class="topping-item">
                     <span>Coconut Jelly</span>
                     <button class="decrease-btn" data-ingredient="coconut-jelly">-</button>
                     <span class="quantity" data-ingredient="coconut-jelly">0</span>
                     <button class="increase-btn" data-ingredient="coconut-jelly">+</button>
                 </div>
-                <div class="topping-item">
-                    <span>Grass Jelly</span>
-                    <button class="decrease-btn" data-ingredient="grass-jelly">-</button>
-                    <span class="quantity" data-ingredient="grass-jelly">0</span>
-                    <button class="increase-btn" data-ingredient="grass-jelly">+</button>
-                </div>
-                <div class="topping-item">
-                    <span>Jasmine Jello</span>
-                    <button class="decrease-btn" data-ingredient="jasmine-jello">-</button>
-                    <span class="quantity" data-ingredient="jasmine-jello">0</span>
-                    <button class="increase-btn" data-ingredient="jasmine-jello">+</button>
+				<div class="topping-item">
+                    <span>Jello</span>
+                    <button class="decrease-btn" data-ingredient="jello">-</button>
+                    <span class="quantity" data-ingredient="jello">0</span>
+                    <button class="increase-btn" data-ingredient="jello">+</button>
                 </div>
                 <div class="topping-item">
                     <span>Diced Mango</span>
@@ -134,38 +159,124 @@
                     <button class="increase-btn" data-ingredient="diced-mangos">+</button>
                 </div>
                 <div class="topping-item">
-                    <span>Crystal Boba</span>
-                    <button class="decrease-btn" data-ingredient="crystal-boba">-</button>
-                    <span class="quantity" data-ingredient="crystal-boba">0</span>
-                    <button class="increase-btn" data-ingredient="crystal-boba">+</button>
-                </div>
-                <div class="topping-item">
-                    <span>Lychee Jello</span>
-                    <button class="decrease-btn" data-ingredient="lychee-jello">-</button>
-                    <span class="quantity" data-ingredient="lychee-jello">0</span>
-                    <button class="increase-btn" data-ingredient="lychee-jello">+</button>
-                </div>
-                <div class="topping-item">
-                    <span>Sago</span>
-                    <button class="decrease-btn" data-ingredient="sago">-</button>
-                    <span class="quantity" data-ingredient="sago">0</span>
-                    <button class="increase-btn" data-ingredient="sago">+</button>
-                </div>
-                <div class="topping-item">
-                    <span>Jello</span>
-                    <button class="decrease-btn" data-ingredient="jello">-</button>
-                    <span class="quantity" data-ingredient="jello">0</span>
-                    <button class="increase-btn" data-ingredient="jello">+</button>
-                </div>
-                <div class="topping-item">
                     <span>BS Syrup</span>
                     <button class="decrease-btn" data-ingredient="bs-syrup">-</button>
                     <span class="quantity" data-ingredient="bs-syrup">0</span>
                     <button class="increase-btn" data-ingredient="bs-syrup">+</button>
                 </div>
+				<div class="topping-item">
+                    <span>BS Boba</span>
+                    <button class="decrease-btn" data-ingredient="bs-boba">-</button>
+                    <span class="quantity" data-ingredient="bs-boba">0</span>
+                    <button class="increase-btn" data-ingredient="bs-boba">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Grapefruit</span>
+                    <button class="decrease-btn" data-ingredient="grapefruit">-</button>
+                    <span class="quantity" data-ingredient="grapefruit">0</span>
+                    <button class="increase-btn" data-ingredient="grapefruit">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Coconut Cream</span>
+                    <button class="decrease-btn" data-ingredient="coconut-cream">-</button>
+                    <span class="quantity" data-ingredient="coconut-cream">0</span>
+                    <button class="increase-btn" data-ingredient="coconut-cream">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Taro</span>
+                    <button class="decrease-btn" data-ingredient="taro">-</button>
+                    <span class="quantity" data-ingredient="taro">0</span>
+                    <button class="increase-btn" data-ingredient="taro">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Mochi</span>
+                    <button class="decrease-btn" data-ingredient="mochi">-</button>
+                    <span class="quantity" data-ingredient="mochi">0</span>
+                    <button class="increase-btn" data-ingredient="mochi">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Red Bean</span>
+                    <button class="decrease-btn" data-ingredient="red-bean">-</button>
+                    <span class="quantity" data-ingredient="red-bean">0</span>
+                    <button class="increase-btn" data-ingredient="red-bean">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Oat</span>
+                    <button class="decrease-btn" data-ingredient="oat">-</button>
+                    <span class="quantity" data-ingredient="oat">0</span>
+                    <button class="increase-btn" data-ingredient="oat">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Rice</span>
+                    <button class="decrease-btn" data-ingredient="rice">-</button>
+                    <span class="quantity" data-ingredient="rice">0</span>
+                    <button class="increase-btn" data-ingredient="rice">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Cake Paste</span>
+                    <button class="decrease-btn" data-ingredient="cake-paste">-</button>
+                    <span class="quantity" data-ingredient="cake-paste">0</span>
+                    <button class="increase-btn" data-ingredient="cake-paste">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Peaches</span>
+                    <button class="decrease-btn" data-ingredient="peaches">-</button>
+                    <span class="quantity" data-ingredient="peaches">0</span>
+                    <button class="increase-btn" data-ingredient="peaches">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Yogurt</span>
+                    <button class="decrease-btn" data-ingredient="yogurt">-</button>
+                    <span class="quantity" data-ingredient="yogurt">0</span>
+                    <button class="increase-btn" data-ingredient="yogurt">+</button>
+                </div>
+				<div class="topping-item">
+                    <span>Crushed Strawberry</span>
+                    <button class="decrease-btn" data-ingredient="crushed-strawberry">-</button>
+                    <span class="quantity" data-ingredient="crushed-strawberry">0</span>
+                    <button class="increase-btn" data-ingredient="crushed-strawberry">+</button>
+                </div>
+            </div>
+			<div class="powder-section">
+			<h2>Powders</h2>
+                <div class="powder-item">
+                    <span>Taro</span>
+                    <button class="decrease-btn" data-ingredient="taro-pwdr">-</button>
+                    <span class="quantity" data-ingredient="taro-pwdr">0</span>
+                    <button class="increase-btn" data-ingredient="taro-pwdr">+</button>
+                </div>
+                <div class="powder-item">
+                    <span>Oreo</span>
+                    <button class="decrease-btn" data-ingredient="oreo">-</button>
+                    <span class="quantity" data-ingredient="oreo">0</span>
+                    <button class="increase-btn" data-ingredient="oreo">+</button>
+                </div>
+                <div class="powder-item">
+                    <span>Coco</span>
+                    <button class="decrease-btn" data-ingredient="coco">-</button>
+                    <span class="quantity" data-ingredient="coco">0</span>
+                    <button class="increase-btn" data-ingredient="coco">+</button>
+                </div>
+                <div class="powder-item">
+                    <span>Soy</span>
+                    <button class="decrease-btn" data-ingredient="soy">-</button>
+                    <span class="quantity" data-ingredient="soy">0</span>
+                    <button class="increase-btn" data-ingredient="soy">+</button>
+                </div>
+                <div class="powder-item">
+                    <span>Crab Yolk</span>
+                    <button class="decrease-btn" data-ingredient="crab-yolk">-</button>
+                    <span class="quantity" data-ingredient="crab-yolk">0</span>
+                    <button class="increase-btn" data-ingredient="crab-yolk">+</button>
+                </div>
+                <div class="powder-item">
+                    <span>Mango Powder</span>
+                    <button class="decrease-btn" data-ingredient="mango-pwdr">-</button>
+                    <span class="quantity" data-ingredient="mango-pwdr">0</span>
+                    <button class="increase-btn" data-ingredient="mango-pwdr">+</button>
+                </div>
             </div>
         </div>
-
             <!-- Ingredients section -->
         <div id="inventory-container">
             <div class="dairy-section">
@@ -181,7 +292,7 @@
                     <button class="decrease-btn" data-ingredient="creamer">-</button>
                     <span class="quantity" data-ingredient="creamer">0</span>
                     <button class="increase-btn" data-ingredient="creamer">+</button>
-                </div>
+                </div>
             </div>
             <div class="inventory-section">
                 <h2>Syrups</h2>
@@ -205,15 +316,15 @@
                 </div>
 				<div class="inventory-item">
                     <span>Lychee Enz</span>
-                    <button class="decrease-btn" data-ingredient="lychee enz">-</button>
-                    <span class="quantity" data-ingredient="lychee enz">0</span>
-                    <button class="increase-btn" data-ingredient="lychee enz">+</button>
+                    <button class="decrease-btn" data-ingredient="lychee-enz">-</button>
+                    <span class="quantity" data-ingredient="lychee-enz">0</span>
+                    <button class="increase-btn" data-ingredient="lychee-enz">+</button>
                 </div>
 				<div class="inventory-item">
                     <span>Peach Enz</span>
-                    <button class="decrease-btn" data-ingredient="peach enz">-</button>
-                    <span class="quantity" data-ingredient="peach enz">0</span>
-                    <button class="increase-btn" data-ingredient="peach enz">+</button>
+                    <button class="decrease-btn" data-ingredient="peach-enz">-</button>
+                    <span class="quantity" data-ingredient="peach-enz">0</span>
+                    <button class="increase-btn" data-ingredient="peach-enz">+</button>
                 </div>
                 <div class="inventory-item">
                     <span>Mango</span>
@@ -233,12 +344,90 @@
                     <span class="quantity" data-ingredient="peach">0</span>
                     <button class="increase-btn" data-ingredient="peach">+</button>
                 </div>
+				<div class="inventory-item">
+                    <span>Wintermelon</span>
+                    <button class="decrease-btn" data-ingredient="wintermelon">-</button>
+                    <span class="quantity" data-ingredient="wintermelon">0</span>
+                    <button class="increase-btn" data-ingredient="wintermelon">+</button>
+                </div>
             </div>
-        </div>
-		
-        <div id="ice-container">
+			<div class="additonal-section">
+                <h2>Additional</h2>
+                <div class="additonal-item">
+                    <span>Mango Jam</span>
+                    <button class="decrease-btn" data-ingredient="mango-jam">-</button>
+                    <span class="quantity" data-ingredient="mango-jam">0</span>
+                    <button class="increase-btn" data-ingredient="mango-jam">+</button>
+                </div>
+				<div class="additonal-item">
+                    <span>Lemon</span>
+                    <button class="decrease-btn" data-ingredient="lemon">-</button>
+                    <span class="quantity" data-ingredient="lemon">0</span>
+                    <button class="increase-btn" data-ingredient="lemon">+</button>
+                </div>
+				<div class="additonal-item">
+                    <span>Lime</span>
+                    <button class="decrease-btn" data-ingredient="lime">-</button>
+                    <span class="quantity" data-ingredient="lime">0</span>
+                    <button class="increase-btn" data-ingredient="lime">+</button>
+                </div>
+				<div class="additonal-item">
+                    <span>Strawberry</span>
+                    <button class="decrease-btn" data-ingredient="strawberry">-</button>
+                    <span class="quantity" data-ingredient="strawberry">0</span>
+                    <button class="increase-btn" data-ingredient="strawberry">+</button>
+                </div>
+				<div class="straw-ava-item">
+                    <span>Strawberry Jam</span>
+                    <button class="decrease-btn" data-ingredient="strawberry-jam">-</button>
+                    <span class="quantity" data-ingredient="strawberry-jam">0</span>
+                    <button class="increase-btn" data-ingredient="strawberry-jam">+</button>
+                </div>
+                <div class="straw-ava-item">
+                    <span>Avocado</span>
+                    <button class="decrease-btn" data-ingredient="avocado">-</button>
+                    <span class="quantity" data-ingredient="avocado">0</span>
+                    <button class="increase-btn" data-ingredient="avocado">+</button>
+                </div>
+                <div class="watermelon-item">
+                    <span>Watermelon</span>
+                    <button class="decrease-btn" data-ingredient="watermelon">-</button>
+                    <span class="quantity" data-ingredient="watermelon">0</span>
+                    <button class="increase-btn" data-ingredient="watermelon">+</button>
+                </div>
+				<div class="additonal-item">
+                    <span>Brulee</span>
+                    <button class="decrease-btn" data-ingredient="brulee">-</button>
+                    <span class="quantity" data-ingredient="brulee">0</span>
+                    <button class="increase-btn" data-ingredient="brulee">+</button>
+                </div>
+                <div class="additonal-item">
+                    <span>Passion Fruit</span>
+                    <button class="decrease-btn" data-ingredient="passion-fruit">-</button>
+                    <span class="quantity" data-ingredient="passion-fruit">0</span>
+                    <button class="increase-btn" data-ingredient="passion-fruit">+</button>
+                </div>
+				<div class="additonal-item">
+                    <span>Cheese Foam</span>
+                    <button class="decrease-btn" data-ingredient="cheese-foam">-</button>
+                    <span class="quantity" data-ingredient="cheese-foam">0</span>
+                    <button class="increase-btn" data-ingredient="cheese-foam">+</button>
+                </div>
+				<div class="matcha-item">
+                    <span>Matcha</span>
+                    <button class="decrease-btn" data-ingredient="matcha">-</button>
+                    <span class="quantity" data-ingredient="matcha">0</span>
+                    <button class="increase-btn" data-ingredient="matcha">+</button>
+                </div>
+				<div class="additonal-item">
+                    <span>Yakult</span>
+                    <button class="decrease-btn" data-ingredient="yakult">-</button>
+                    <span class="quantity" data-ingredient="yakult">0</span>
+                    <button class="increase-btn" data-ingredient="yakult">+</button>
+                </div>
+            </div>
+			<div class="ice-section">
             <h2>Ice</h2>
-            <div class="ice-section">
                 <div class="ice-item">
                     <span>Ice</span>
                     <button class="decrease-btn" data-ingredient="ice">-</button>
@@ -246,7 +435,6 @@
                     <button class="increase-btn" data-ingredient="ice">+</button>
                 </div>
                 <button id="add-ice-btn">Add Ice</button>
-
             </div>
         </div>
 		
