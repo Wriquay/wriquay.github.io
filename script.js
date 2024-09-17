@@ -20,10 +20,11 @@ const recipes = {
   },  
     "A3 Mango pudding slush": {
     "milk": 80,
-    "cramer": 30,
-	"sago": 1,
+    "creamer": 30,
+	   "sago": 1,
     "brulee": 1,
     "sugar": 20,
+    "ice":600
   },
     "A4 Signature fruit tea": {
     "4-seasons-tea": 300,
