@@ -1,23 +1,96 @@
 const recipes = {
-  "Grape Tea": {
+  "A1 Mango pomelo coconut": {
+    "diced-mangos": 0.5,
+    "grapefruit": 1,
+    "sago": 1,
+    "coconut-cream": 1,
+	"ice": 300,
+	"mango-pwdr": 1,
+	"mango-jam": 1,
+	"water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+  "A2 Season spring mango tea": {
+    "4-seasons-tea": 250,
+    "coconut-jelly": 1,
+    "sugar": 20,
+    "mango-jam": 1,
+  },  
+    "A3 Mango pudding slush": {
+    "milk": 80,
+    "cramer": 30,
+	"sago": 1,
+    "brulee": 1,
+    "sugar": 20,
+  },
+    "A4 Signature fruit tea": {
+    "4-seasons-tea": 300,
+    "a4": 40,
+    "sugar": 35,
+  },
+    "A5 Pink peach lemon": {
+    "green-tea": 50,
+    "lemon": 3,
+    "sugar": 55,
+    "coconut-jelly": 1,
+	"peach": 40,
+	"dragon": 5,
+	"water": {
+      "quantity": 250,
+      "state": "cold"
+    }
+  },
+    "A6 Brown sugar milk tea": {
+    "bs-syrup": 0.5,
+    "bs-boba": 1,
+    "black-tea": 150,
+    "creamer": 60,
+	"cheese-foam": 1,
+  },
+    "A7 Brown sugar fresh milk": {
+    "bs-syrup": 0.5,
+    "bs-boba": 1,
+    "milk": 200,
+	"cheese-foam": 1,
+  },
+    "B1 lime jasmine green tea": {
+    "green-tea": 300,
+    "jasmine-jello": 1,
+    "sugar": 70,
+    "lime": 5,
+  },
+    "B2 passion fruit tea": {
+    "green-tea": 250,
+    "coconut-jelly": 1,
+    "passion-fruit": 1,
+    "lime": 1,
+	"sugar": 50,
+	"water": {
+      "quantity": 50,
+      "state": "hot"
+    }
+  },  
+    "B3 miao maio grape tea": {
     "green-tea": 250,
     "crystal-boba": 1,
     "sugar": 20,
     "grape": 40,
   },
-  "Peral Milk Tea": {
-    "black-tea": 250,
-    "creamer": 100,
-    "sugar": 30,
-    "peral": 1,
+    "B4 brewed peach fruit tea": {
+    "green-tea": 250,
+    "jello": 1,
+    "sugar": 20,
+	"rice": 2,
+	"dragon": 5,
+    "peach": 60,
+	"water": {
+      "quantity": 250,
+      "state": "cold"
+    }
   },
-  "Grass Jelly Milk Tea": {
-    "black-tea": 250,
-    "grass-jelly": 1,
-    "sugar": 30,
-    "creamer": 100,
-  },
-  "Lychee Tea": {
+    "B5 lychee fruit tea": {
     "lychee": 20,
     "lychee-jello": 1,
     "sugar": 25,
@@ -26,18 +99,423 @@ const recipes = {
       "quantity": 250,
       "state": "cold"
     }
+  },
+    "B8 strawberry lemon tea": {
+    "4-seasons-tea": 250,
+    "crystal-boba": 1,
+    "sugar": 25,
+    "strawberry": 2,
+	"strawberry-jam": 1,
+	"lemon": 5,
+  },
+    "B9 wintermelon tea": {
+    "grass-jelly": 1,
+    "wintermelon": 40,
+	"water": {
+      "quantity": 250,
+      "state": "cold"
+    }
+  },
+    "C1 strawberry peach tea slush": {
+    "strawberry": 2,
+    "peach": 60,
+    "sugar": 30,
+    "dragon": 5,
+	"cheese-foam": 2,
+	"ice": 450,
+	"water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "C2 mango tea slush": {
+    "4-seasons-tea": 150,
+    "crystal-boba": 0.5,
+	"diced-mangos": 0.5,
+	"mango-jam": 1,
+	"jello": 1,
+	"ice": 400,
+    "sugar": 25,
+    "cheese-foam": 2,
+  },
+    "C3 grape tea slush": {
+    "green-tea": 150,
+	"grape": 40,
+    "crystal-boba": 0.5,
+    "jello": 1,
+	"ice": 450,
+    "sugar": 25,
+    "cheese-foam": 2,
+  },
+    "C4 strawberry tea slush": {
+    "4-seasons-tea": 150,
+    "crystal-boba": 0.5,
+    "strawberry": 2,
+	"crushed-strawberry": 1,
+	"strawberry-jam": 1,
+	"jello": 1,
+	"ice": 450,
+    "sugar": 25,
+    "cheese-foam": 2,
+  },
+    "C5 watermelon tea slush": {
+    "ice": 300,
+    "watermelon": 300,
+    "4-seasons-tea": 75,
+    "sugar": 25,
+    "cheese-foam": 2,
+  },
+    "C6 pink peach tea slush": {
+    "peaches": 2,
+    "ice": 600,
+    "peach": 55,
+    "dragon": 5,
+    "4-seasons-tea": 100,
+    "sugar": 30,
+  },
+    "C7 mousse pink peach slush": {
+    "peaches": 2,
+    "ice": 600,
+    "peach": 55,
+    "dragon": 5,
+    "creamer": 60,
+    "sugar": 20,
+    "water": {
+      "quantity": 100,
+      "state": "cold"
+    }
+  },
+    "D1 lychee enzyme": {
+    "lychee-jello": 1,
+    "lychee": 15,
+    "lychee-enz": 25,
+    "sugar": 5,
+    "water": {
+      "quantity": 200,
+      "state": "cold"
+    }
+  },
+    "D2 peach enzyme": {
+    "jasmine-jello": 1,
+    "peach-enz": 25,
+    "dragon": 5,
+    "sugar": 15,
+    "water": {
+      "quantity": 200,
+      "state": "cold"
+    }
+  },
+    "E1 assorted milk tea": {
+    "cake-paste": 1,
+    "oat": 1,
+    "taro": 1,
+    "taro-balls": 1,
+    "oreo": 1,
+    "creamer": 100,
+    "black-tea": 250,
+    "sugar": 25,
+  },
+    "E2 peral milk tea": {
+    "black-tea": 250,
+    "creamer": 100,
+    "sugar": 30,
+    "peral": 1,
+  },
+    "E3 oat milk tea": {
+    "oat": 3,
+    "taro-balls": 0.5,
+    "creamer": 100,
+    "black-tea": 250,
+    "sugar": 30,
+  },
+    "E4 red bean milk tea": {
+    "red-bean": 3,
+    "taro-balls": 0.5,
+    "creamer": 100,
+    "black-tea": 250,
+    "sugar": 25,
+  },
+    "E5 fresh taro milk tea": {
+    "taro": 3,
+    "taro-balls": 0.5,
+    "creamer": 100,
+    "black-tea": 250,
+    "sugar": 30,
+  },
+    "E6 cocoa milk tea": {
+    "cake-paste": 1,
+    "oreo": 2,
+    "cocoa": 2,
+    "creamer": 80,
+    "black-tea": 150,
+    "sugar": 20,
+    "water": {
+      "quantity": 150,
+      "state": "hot"
+    }
+  },
+    "E7 brewed green milk tea": {
+    "taro-balls": 1,
+    "rice": 2,
+    "creamer": 100,
+    "green-tea": 250,
+    "sugar": 25,
+  },
+    "E8 brulee": {
+    "brulee": 1,
+    "creamer": 100,
+    "black-tea": 250,
+    "sugar": 25,
+  },
+    "E9 matcha milk tea": {
+    "red-bean": 2,
+    "taro-balls": 0.5,
+    "matcha": 5,
+    "creamer": 80,
+    "sugar": 25,
+    "water": {
+      "quantity": 150,
+      "state": "hot"
+    }
+  },
+    "E10 mochi soy milk tea": {
+    "mochi": 1,
+    "soy": 1,
+    "creamer": 60,
+    "black-tea": 150,
+    "cheese-foam": 1,
+    "sugar": 20,
+  },
+    "E11 mochi oreo milk tea": {
+    "mochi": 1,
+    "oreo": 1,
+    "creamer": 60,
+    "black-tea": 150,
+    "cheese-foam": 1,
+    "sugar": 20,
+  },
+    "E12 mochi crab yolk milk tea": {
+    "mochi": 1,
+    "crab-yolk": 1,
+    "creamer": 60,
+    "black-tea": 150,
+    "cheese-foam": 1,
+    "sugar": 20,
+  },
+    "E13 grass jelly milk tea": {
+    "black-tea": 250,
+    "grass-jelly": 1,
+    "sugar": 30,
+    "creamer": 100,
+  },
+    "F1 peach yogurt": {
+    "jello": 100,
+    "yogurt": 80,
+    "peach": 50,
+    "dragon": 5,
+    "4-seasons-tea": 75,
+    "ice": 400,
+    "sugar": 25,
+  },
+    "F2 grape yogurt": {
+    "jello": 100,
+    "yogurt": 80,
+    "grape": 40,
+    "4-seasons-tea": 100,
+    "ice": 400,
+    "sugar": 20,
+  },
+    "F3 strawberry yogurt": {
+    "strawberry": 2,
+	"crushed-strawberry": 1,
+    "jello": 100,
+    "yogurt": 80,
+    "strawberry-jam": 1,
+    "4-seasons-tea": 75,
+    "ice": 400,
+    "sugar": 20,
+  },
+    "F4 mango yogurt": {
+    "diced-mango": 1,
+    "jello": 100,
+    "yogurt": 80,
+    "mango-jam": 1,
+    "4-seasons-tea": 100,
+    "ice": 350,
+    "sugar": 15,
+  },
+    "F5 avocado yogurt": {
+    "jello": 100,
+    "yogurt": 80,
+    "avocado": 0.5,
+    "green-tea": 100,
+    "ice": 400,
+    "sugar": 35,
+  },
+    "F6 lychee yogurt": {
+    "lychee-jello": 100,
+    "yogurt": 80,
+    "crystal-boba": 0.25,
+    "lychee": 40,
+    "dragon": 15,
+    "4-seasons-tea": 75,
+    "ice": 400,
+    "sugar": 10,
+  },
+    "F7 dragon fruit yogurt": {
+    "jello": 100,
+    "yogurt": 80,
+    "dragon-fruit": 0.5,
+    "4-seasons-tea": 100,
+    "ice": 350,
+    "sugar": 35,
+  },
+    "G1 strawberry smoothie": {
+    "strawberry-jam": 1.5,
+    "creamer": 40,
+    "ice": 500,
+	"sugar": 12,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "G2 matcha smoothie": {
+    "matcha": 10,
+    "creamer": 80,
+    "ice": 500,
+	"sugar": 40,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "G3 cocoa smoothie": {
+    "cocoa": 2,
+    "creamer": 20,
+	"sugar": 15,
+    "ice": 500,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "G4 dragon fruit smoothie": {
+    "dragon-fruit": 0.5,
+    "creamer": 80,
+	"sugar": 30,
+    "ice": 550,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "G5 taro smoothie": {
+    "taro-pwdr": 2,
+    "creamer": 80,
+    "ice": 550,
+	"sugar": 25,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "H1 mango yakult": {
+    "coconut-jelly": 1,
+    "mango": 25,
+    "yakult": 2,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "H2 lychee yakult": {
+    "coconut-jelly": 1,
+    "lychee": 40,
+    "yakult": 2,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
+  },
+    "H3 strawberry yakult": {
+    "coconut-jelly": 1,
+    "strawberry-jam": 0.75,
+    "yakult": 2,
+    "water": {
+      "quantity": 150,
+      "state": "cold"
+    }
   }
 };
 
-// Function to randomly select a drink and update the "Current Drink" section
+// List of all drinks
+const drinks = ['A1 Mango pomelo coconut', 'A2 Season spring mango tea', 'A3 Mango pudding slush', 'A4 Signature fruit tea', 'A5 Pink peach lemon', 'A6 Brown sugar milk tea', 'A7 Brown sugar fresh milk', 'B1 lime jasmine green tea', 'B2 passion fruit tea', 'B3 miao maio grape tea', 'B4 brewed peach fruit tea', 'B5 lychee fruit tea', 'B8 strawberry lemon tea', 'B9 wintermelon tea', 'C1 strawberry peach tea slush', 'C2 mango tea slush', 'C3 grape tea slush', 'C4 strawberry tea slush', 'C5 watermelon tea slush', 'C6 pink peach tea slush', 'C7 mousse pink peach slush', 'D1 lychee enzyme', 'D2 peach enzyme', 'E1 assorted milk tea', 'E2 peral milk tea', 'E3 oat milk tea', 'E4 red bean milk tea', 'E5 fresh taro milk tea', 'E6 cocoa milk tea', 'E7 brewed green milk tea', 'E8 brulee', 'E9 matcha milk tea', 'E10 mochi soy milk tea', 'E11 mochi oreo milk tea', 'E12 mochi crab yolk milk tea', 'E13 grass jelly milk tea', 'F1 peach yogurt', 'F2 grape yogurt', 'F3 strawberry yogurt', 'F4 mango yogurt', 'F5 avocado yogurt', 'F6 lychee yogurt', 'F7 dragon fruit yogurt', 'G1 strawberry smoothie', 'G2 matcha smoothie', 'G3 cocoa smoothie', 'G4 dragon fruit smoothie', 'G5 taro smoothie', 'H1 mango yakult', 'H2 lychee yakult', 'H3 strawberry yakult'];
+
+// Sorted list of drinks
+const alphabeticalDrinks = ['A1 Mango pomelo coconut', 'A2 Season spring mango tea', 'A3 Mango pudding slush', 'A4 Signature fruit tea', 'A5 Pink peach lemon', 'A6 Brown sugar milk tea', 'A7 Brown sugar fresh milk', 'B1 lime jasmine green tea', 'B2 passion fruit tea', 'B3 miao maio grape tea', 'B4 brewed peach fruit tea', 'B5 lychee fruit tea', 'B8 strawberry lemon tea', 'B9 wintermelon tea', 'C1 strawberry peach tea slush', 'C2 mango tea slush', 'C3 grape tea slush', 'C4 strawberry tea slush', 'C5 watermelon tea slush', 'C6 pink peach tea slush', 'C7 mousse pink peach slush', 'D1 lychee enzyme', 'D2 peach enzyme', 'E1 assorted milk tea', 'E2 peral milk tea', 'E3 oat milk tea', 'E4 red bean milk tea', 'E5 fresh taro milk tea', 'E6 cocoa milk tea', 'E7 brewed green milk tea', 'E8 brulee', 'E9 matcha milk tea', 'E10 mochi soy milk tea', 'E11 mochi oreo milk tea', 'E12 mochi crab yolk milk tea', 'E13 grass jelly milk tea', 'F1 peach yogurt', 'F2 grape yogurt', 'F3 strawberry yogurt', 'F4 mango yogurt', 'F5 avocado yogurt', 'F6 lychee yogurt', 'F7 dragon fruit yogurt', 'G1 strawberry smoothie', 'G2 matcha smoothie', 'G3 cocoa smoothie', 'G4 dragon fruit smoothie', 'G5 taro smoothie', 'H1 mango yakult', 'H2 lychee yakult', 'H3 strawberry yakult'].sort();
+
+// List to keep track of shown drinks
+let shownDrinks = [];
+let currentDrinkList = [];
+let alphabeticalIndex = 0; // Index for alphabetical order
+
+// Function to update the current drink based on the current state
 function updateCurrentDrink() {
-    const drinks = ['Grape Tea', 'Peral Milk Tea', 'Grass Jelly Milk Tea', 'Lychee Tea'];
-    const randomDrink = drinks[Math.floor(Math.random() * drinks.length)];
-    document.getElementById('drink-name').textContent = randomDrink;
+    if (shownDrinks.length === currentDrinkList.length) {
+        // All drinks have been shown, reset the list
+        shownDrinks = [];
+        if (currentDrinkList === alphabeticalDrinks) {
+            alphabeticalIndex = 0; // Reset alphabetical index
+        }
+    }
+
+    let drinkToShow;
+
+    if (currentDrinkList === alphabeticalDrinks) {
+        // Show drinks in alphabetical order
+        drinkToShow = alphabeticalDrinks[alphabeticalIndex];
+        alphabeticalIndex++;
+    } else {
+        // Show drinks randomly
+        do {
+            drinkToShow = currentDrinkList[Math.floor(Math.random() * currentDrinkList.length)];
+        } while (shownDrinks.includes(drinkToShow));
+    }
+
+    // Add the selected drink to the list of shown drinks
+    shownDrinks.push(drinkToShow);
+
+    // Update the drink name on the page
+    document.getElementById('drink-name').textContent = drinkToShow;
 }
+
+// Toggle button click event listener
+document.getElementById('toggle-randomizer-btn').addEventListener('click', function() {
+    const button = this;
+    const currentState = button.dataset.state;
+
+    if (currentState === 'random') {
+        button.textContent = 'Alphabetical';
+        button.dataset.state = 'alphabetical';
+        currentDrinkList = alphabeticalDrinks;
+        // Reset shown drinks and index when switching to alphabetical
+        shownDrinks = [];
+        alphabeticalIndex = 0;
+    } else {
+        button.textContent = 'Random';
+        button.dataset.state = 'random';
+        currentDrinkList = drinks;
+        // Reset shown drinks when switching to random
+        shownDrinks = [];
+    }
+
+    updateCurrentDrink();
+});
 
 // Call the function when the page loads
 window.addEventListener('load', function() {
+    currentDrinkList = drinks; // Start with random order
     updateCurrentDrink(); // Show a random drink when the page loads
 });
 
@@ -115,7 +593,7 @@ document.getElementById('add-ice-btn').addEventListener('click', function() {
     });
 });
 
-document.querySelectorAll('#topping-container button').forEach(button => {
+document.querySelectorAll('.topping-item button').forEach(button => {
     button.addEventListener('click', function() {
         const ingredient = this.dataset.ingredient;
         const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
@@ -129,6 +607,26 @@ document.querySelectorAll('#topping-container button').forEach(button => {
         } else if (this.classList.contains('decrease-btn')) {
             if (currentQuantity > 0) {
                 currentQuantity = Math.max(currentQuantity - 0.5, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.powder-section button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 2) {
+                currentQuantity = Math.min(currentQuantity + 1, 2); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 1, 0); // Ensure it doesn't go below 0
                 quantitySpan.textContent = currentQuantity;
             }
         }
@@ -230,6 +728,26 @@ document.querySelectorAll('.tea-item button').forEach(button => {
             if (currentQuantity > 0) {
                 currentQuantity = Math.max(currentQuantity - 25, 0); // Ensure it doesn't go below 0
                 quantityInput.value = currentQuantity;
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.yogurt-item button').forEach(button => {
+    button.addEventListener('click', function() {
+        const ingredient = this.dataset.ingredient;
+        const quantitySpan = document.querySelector(`.quantity[data-ingredient="${ingredient}"]`);
+        let currentQuantity = parseFloat(quantitySpan.textContent, 10);
+
+        if (this.classList.contains('increase-btn')) {
+            if (currentQuantity < 200) {
+                currentQuantity = Math.min(currentQuantity + 20, 200); // Ensure it doesn't exceed 60
+                quantitySpan.textContent = currentQuantity;
+            }
+        } else if (this.classList.contains('decrease-btn')) {
+            if (currentQuantity > 0) {
+                currentQuantity = Math.max(currentQuantity - 20, 0); // Ensure it doesn't go below 0
+                quantitySpan.textContent = currentQuantity;
             }
         }
     });
