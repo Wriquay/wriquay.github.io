@@ -80,12 +80,11 @@ const recipes = {
     "grape": 40,
   },
     "B4 brewed peach fruit tea": {
-    "green-tea": 250,
     "jello": 1,
     "sugar": 20,
 	"rice": 2,
 	"dragon": 5,
-    "peach": 60,
+    "peach": 50,
 	"water": {
       "quantity": 250,
       "state": "cold"
