@@ -309,7 +309,7 @@ const recipes = {
     "creamer": 100,
   },
     "F1 peach yogurt": {
-    "jello": 100,
+    "jello": 1,
     "yogurt": 80,
     "peach": 50,
     "dragon": 5,
@@ -318,7 +318,7 @@ const recipes = {
     "sugar": 25,
   },
     "F2 grape yogurt": {
-    "jello": 100,
+    "jello": 1,
     "yogurt": 80,
     "grape": 40,
     "4-seasons-tea": 100,
@@ -327,8 +327,8 @@ const recipes = {
   },
     "F3 strawberry yogurt": {
     "strawberry": 2,
-	"crushed-strawberry": 1,
-    "jello": 100,
+    "crushed-strawberry": 1,
+    "jello": 1,
     "yogurt": 80,
     "strawberry-jam": 1,
     "4-seasons-tea": 75,
@@ -336,8 +336,8 @@ const recipes = {
     "sugar": 20,
   },
     "F4 mango yogurt": {
-    "diced-mango": 1,
-    "jello": 100,
+    "diced-mango": 0.5,
+    "jello": 1,
     "yogurt": 80,
     "mango-jam": 1,
     "4-seasons-tea": 100,
@@ -345,7 +345,7 @@ const recipes = {
     "sugar": 15,
   },
     "F5 avocado yogurt": {
-    "jello": 100,
+    "jello": 1,
     "yogurt": 80,
     "avocado": 0.5,
     "green-tea": 100,
@@ -353,7 +353,7 @@ const recipes = {
     "sugar": 35,
   },
     "F6 lychee yogurt": {
-    "lychee-jello": 100,
+    "lychee-jello": 1,
     "yogurt": 80,
     "crystal-boba": 0.25,
     "lychee": 40,
@@ -363,7 +363,7 @@ const recipes = {
     "sugar": 10,
   },
     "F7 dragon fruit yogurt": {
-    "jello": 100,
+    "jello": 1,
     "yogurt": 80,
     "dragon-fruit": 0.5,
     "4-seasons-tea": 100,
